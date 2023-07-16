@@ -10,7 +10,7 @@ spec:
     - port: 16686
       targetPort: 16686
       protocol: TCP
-      nodePort: 33333
+      nodePort: {{ .Values.service.nodePort }}
       name: http
   selector:
     app: jaeger
