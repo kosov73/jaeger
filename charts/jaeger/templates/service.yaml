@@ -5,14 +5,6 @@ metadata:
   labels:
     app: jaeger
 spec:
-  {{- if .Values.ingress.enabled }}
-  type: ClusterIP
-  ports:
-    - port: 16686
-      targetPort: 16686
-      protocol: TCP
-      name: http
-  {{- else }}
   type: NodePort
   ports:
     - port: 16686
@@ -20,7 +12,6 @@ spec:
       protocol: TCP
       nodePort: {{ .Values.service.nodePort }}
       name: http
-  {{- end }}
   selector:
     app: jaeger
 ---
