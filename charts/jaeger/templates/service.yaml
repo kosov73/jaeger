@@ -18,7 +18,7 @@ spec:
     - port: 16686
       targetPort: 16686
       protocol: TCP
-      nodePort: 44444
+      nodePort: 32123
       name: http
   {{- end }}
   selector:
