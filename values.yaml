@@ -13,7 +13,7 @@ jaeger:
       value: monitoring
   service:
     name: jaeger-nodeport
-    nodePort: 30222
+    nodePort: 36666
   ingress:
     enabled: false
     className: ""
